@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — All Things Mahjong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96E;
+    --gold-dim: rgba(201,168,76,0.15);
+    --ink: #1A1208;
+    --cream: #FAF5EB;
+    --bg: #0e0a04;
+    --bg-section: rgba(255,255,255,0.03);
+    --border: rgba(201,168,76,0.15);
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg);
+    color: rgba(255,255,255,0.8);
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px; height: 68px;
+    background: rgba(15,10,5,0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo img { width: 36px; height: 36px; object-fit: contain; }
+  .nav-logo-text { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 600; color: var(--cream); letter-spacing: 0.05em; }
+  .nav-back { font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+  .nav-back:hover { color: var(--gold); }
+
+  /* HERO BANNER */
+  .page-hero {
+    padding: 64px 48px 48px;
+    border-bottom: 1px solid var(--border);
+    max-width: 900px; margin: 0 auto;
+  }
+  .page-eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--gold);
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 16px;
+  }
+  .page-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--gold); opacity: 0.6; }
+  .page-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 600; color: #fff;
+    margin-bottom: 12px;
+  }
+  .page-meta { font-size: 13px; color: rgba(255,255,255,0.35); letter-spacing: 0.05em; }
+
+  /* CONTENT */
+  .content-wrap {
+    max-width: 900px; margin: 0 auto;
+    padding: 48px 48px 80px;
+  }
+
+  /* NOTICE BOX */
+  .notice-box {
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 12px;
+    background: rgba(201,168,76,0.06);
+    padding: 20px 24px;
+    margin-bottom: 40px;
+    font-size: 13px; font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+  }
+
+  /* ABOUT US intro */
+  .about-block {
+    padding: 28px;
+    border-left: 2px solid var(--gold);
+    background: var(--bg-section);
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 48px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+  }
+
+  /* TOC */
+  .toc {
+    background: var(--bg-section);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 48px;
+  }
+  .toc-title {
+    font-family: 'Cinzel', serif;
+    font-size: 14px; font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin-bottom: 6px; }
+  .toc a {
+    font-size: 14px; color: rgba(255,255,255,0.5);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .toc a:hover { color: var(--gold); }
+
+  /* SECTIONS */
+  .section { margin-bottom: 48px; }
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 20px; font-weight: 600;
+    color: #fff;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+    scroll-margin-top: 80px;
+  }
+  .subsection-title {
+    font-size: 15px; font-weight: 700;
+    color: var(--gold-light);
+    margin: 24px 0 10px;
+    letter-spacing: 0.04em;
+  }
+  p { margin-bottom: 14px; color: rgba(255,255,255,0.7); font-size: 15px; }
+  ul, ol { padding-left: 22px; margin-bottom: 14px; }
+  li { margin-bottom: 6px; color: rgba(255,255,255,0.65); font-size: 15px; }
+  strong { color: rgba(255,255,255,0.9); font-weight: 700; }
+
+  /* DISCLAIMER CAPS */
+  .caps-warning {
+    font-size: 13px; font-weight: 700;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.65;
+    padding: 16px 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.02);
+    margin-bottom: 14px;
+  }
+
+  /* TABLE */
+  .legal-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 13px; }
+  .legal-table th {
+    background: rgba(201,168,76,0.1);
+    color: var(--gold);
+    font-weight: 700;
+    padding: 10px 14px;
+    text-align: left;
+    border: 1px solid var(--border);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .legal-table td {
+    padding: 10px 14px;
+    border: 1px solid rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.6);
+    vertical-align: top;
+  }
+  .legal-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+  /* GRIEVANCE CARD */
+  .grievance-card {
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 12px;
+    background: rgba(201,168,76,0.05);
+    padding: 24px 28px;
+    margin-top: 16px;
+  }
+  .grievance-card p { margin-bottom: 6px; font-size: 14px; }
+  .grievance-card a { color: var(--gold); text-decoration: none; }
+  .grievance-card a:hover { text-decoration: underline; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 12px; color: rgba(255,255,255,0.25);
+    letter-spacing: 0.05em;
+  }
+  footer a { color: rgba(255,255,255,0.35); text-decoration: none; margin: 0 12px; }
+  footer a:hover { color: var(--gold); }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .page-hero, .content-wrap { padding-left: 20px; padding-right: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div style="font-family:'Cinzel',serif;font-size:22px;color:var(--gold);">麻</div>
+    <span class="nav-logo-text">All Things Mahjong</span>
+  </a>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-eyebrow">Legal</div>
+  <h1 class="page-title">Terms of Service</h1>
+  <p class="page-meta">All Things Mahjong LLP &nbsp;·&nbsp; Last Updated: May 1, 2026</p>
+</div>
+
+<div class="content-wrap">
+
+  <div class="notice-box">
+    IMPORTANT NOTICE: PLEASE READ THESE TERMS OF SERVICE CAREFULLY BEFORE USING OUR SERVICES. BY ACCESSING OR USING OUR SERVICES, YOU AGREE TO BE BOUND BY THESE TERMS. IF YOU DO NOT AGREE, PLEASE DO NOT USE THE SERVICES.
+  </div>
+
+  <div class="about-block">
+    <strong>All Things Mahjong LLP</strong> (referred to as "we," "us," "our," or the "Company") is a limited liability partnership incorporated under the laws of India, with its registered office at WeWork, Vaswani Chambers, 264/65 Dr Annie Besant Rd, Worli Colony, Worli Police Station, Mumbai‑ 400030, India (LLP Identification Number: ACV-8673). We develop and publish mobile games and related digital services under the brand All Things Mahjong.<br><br>
+    These Terms of Service ("Terms") govern your access to and use of our mobile applications, websites, and related digital services (collectively, the "Services"). These Terms constitute a legally binding agreement between you and the Company.<br><br>
+    Our Services are primarily aimed at entertainment, casual gaming, and puzzle experiences. We operate globally, and these Terms are designed to comply with applicable Indian law while respecting user rights in other jurisdictions.
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#s1">Eligibility</a></li>
+      <li><a href="#s2">Updates to These Terms</a></li>
+      <li><a href="#s3">Privacy Policy</a></li>
+      <li><a href="#s4">Account Registration</a></li>
+      <li><a href="#s5">Permitted and Prohibited Activities</a></li>
+      <li><a href="#s6">Linking</a></li>
+      <li><a href="#s7">Termination</a></li>
+      <li><a href="#s8">Premium Features</a></li>
+      <li><a href="#s9">Intellectual Property Rights</a></li>
+      <li><a href="#s10">Content Submitted by You</a></li>
+      <li><a href="#s11">Third-Party App Stores</a></li>
+      <li><a href="#s12">Third-Party Sites</a></li>
+      <li><a href="#s13">Disclaimer of Medical Advice</a></li>
+      <li><a href="#s14">Other Policies</a></li>
+      <li><a href="#s15">Legal Disputes and Governing Law</a></li>
+      <li><a href="#s16">Warranty Disclaimer; Limitation on Liability</a></li>
+      <li><a href="#s17">Indemnity</a></li>
+      <li><a href="#s18">Digital Millennium Copyright Act Policy</a></li>
+      <li><a href="#s19">General Terms</a></li>
+      <li><a href="#s20">Grievance Officer</a></li>
+      <li><a href="#s21">Contact Information</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="s1">
+    <h2 class="section-title">1. Eligibility</h2>
+    <p>By using our Services, you represent and warrant that:</p>
+    <ul>
+      <li>You are at least 18 years of age, or at least 13 years of age with the consent and supervision of a parent or legal guardian who agrees to these Terms on your behalf (or such higher minimum age as required by the laws of your jurisdiction);</li>
+      <li>You have the legal capacity to enter into these Terms;</li>
+      <li>The information you provide is truthful, accurate, and complete; and</li>
+      <li>Your use of the Services does not violate any applicable laws or regulations in your jurisdiction.</li>
+    </ul>
+    <p>If you are using the Services on behalf of a minor in your care, you accept these Terms on their behalf and are responsible for their use of the Services.</p>
+  </div>
+
+  <div class="section" id="s2">
+    <h2 class="section-title">2. Updates to These Terms</h2>
+    <p>We may revise these Terms from time to time. When we make material changes, we will notify you by:</p>
+    <ul>
+      <li>Posting the revised Terms within the Services, prominently indicating the "Last Updated" date;</li>
+      <li>Sending a notification to the email address registered with your Account (if applicable); and/or</li>
+      <li>Displaying an in-app notice the next time you access the Services.</li>
+    </ul>
+    <p>Where required by applicable law (including the Information Technology Act, 2000, and rules thereunder), we will provide advance notice of material changes. Your continued use of the Services after the effective date of any changes constitutes your acceptance of the revised Terms. If you do not agree to the revised Terms, you must stop using the Services.</p>
+  </div>
+
+  <div class="section" id="s3">
+    <h2 class="section-title">3. Privacy Policy</h2>
+    <p>Your use of the Services is also governed by our <a href="privacy.html" style="color:var(--gold);">Privacy Policy</a>, which is incorporated into these Terms by reference. Our Privacy Policy describes how we collect, use, store, and disclose your personal data in accordance with:</p>
+    <ul>
+      <li>The Information Technology Act, 2000, and the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011;</li>
+      <li>The Digital Personal Data Protection Act, 2023 (DPDPA), and any rules issued thereunder; and</li>
+      <li>Applicable privacy and data protection laws in the jurisdictions where our users are located.</li>
+    </ul>
+    <p>We encourage you to review our Privacy Policy carefully before using the Services.</p>
+  </div>
+
+  <div class="section" id="s4">
+    <h2 class="section-title">4. Account Registration</h2>
+    <p>Certain features of our Services may require you to register for an account ("Account"). When registering, you agree to:</p>
+    <ul>
+      <li>Provide accurate, current, and complete information;</li>
+      <li>Maintain and promptly update your information to keep it accurate; and</li>
+      <li>Maintain the confidentiality of your login credentials.</li>
+    </ul>
+    <p>You may only maintain one active Account per application, and you may not share your Account with others. You are solely responsible for all activities that occur under your Account. If you become aware of any unauthorized access or security breach, you must notify us immediately at <a href="mailto:info@allthingsmahjong.in" style="color:var(--gold);">info@allthingsmahjong.in</a>.</p>
+    <p>We reserve the right to suspend or terminate Accounts that violate these Terms, contain inaccurate information, or are used fraudulently, without prior notice.</p>
+  </div>
+
+  <div class="section" id="s5">
+    <h2 class="section-title">5. Permitted and Prohibited Activities</h2>
+    <div class="subsection-title">Permitted Use</div>
+    <p>Our Services are intended for personal, non-commercial entertainment purposes. Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable licence to access and use the Services for personal enjoyment.</p>
+    <div class="subsection-title">Prohibited Activities</div>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use the Services for any unlawful, fraudulent, or unauthorized purpose;</li>
+      <li>Post, upload, or transmit content that is defamatory, obscene, harassing, hateful, discriminatory, or otherwise objectionable;</li>
+      <li>Impersonate any person or entity or misrepresent your affiliation with any person or entity;</li>
+      <li>Attempt to gain unauthorized access to any part of the Services, other user accounts, or any systems or networks connected to the Services;</li>
+      <li>Use bots, scrapers, crawlers, or other automated tools to access or extract data from the Services;</li>
+      <li>Reverse engineer, decompile, or disassemble any software component of the Services;</li>
+      <li>Introduce viruses, malware, or other harmful code into the Services;</li>
+      <li>Interfere with or disrupt the integrity or performance of the Services;</li>
+      <li>Use the Services to build a competing product or service, or to benchmark the Services against a competitor's product;</li>
+      <li>Engage in any activity that violates any applicable law, including the Information Technology Act, 2000, the Consumer Protection Act, 2019, or the Digital Personal Data Protection Act, 2023; or</li>
+      <li>Assist or encourage any third party to engage in any of the above prohibited activities.</li>
+    </ul>
+    <p>We reserve the right to investigate and take appropriate legal action against anyone who, in our sole discretion, violates this section, including reporting such conduct to law enforcement authorities.</p>
+  </div>
+
+  <div class="section" id="s6">
+    <h2 class="section-title">6. Linking</h2>
+    <p>You may create text hyperlinks to the Services for informational, non-commercial purposes, provided such links do not portray the Company in a false, misleading, or defamatory manner, and that the linking site does not contain unlawful, harmful, or otherwise objectionable content. We reserve the right to revoke this permission at any time.</p>
+    <p>We grant operators of public search engines permission to spider and index content from our public-facing web pages solely for the purpose of creating searchable indices. This permission may be withdrawn at any time.</p>
+  </div>
+
+  <div class="section" id="s7">
+    <h2 class="section-title">7. Termination</h2>
+    <p>These Terms remain in effect until terminated. We may suspend or terminate your access to the Services, with or without prior notice, if we reasonably believe you have violated these Terms, applicable law, or have engaged in fraudulent or harmful conduct.</p>
+    <p>You may terminate these Terms at any time by ceasing to use the Services and deleting your Account (where applicable). Upon termination:</p>
+    <ul>
+      <li>You must cease all use of the Services and delete any downloaded content;</li>
+      <li>We may delete your Account and any associated User Content; and</li>
+      <li>Provisions of these Terms that by their nature should survive (including intellectual property, disclaimers, limitations of liability, indemnity, and dispute resolution) shall continue to apply.</li>
+    </ul>
+    <p>Even after termination, any User Content you have submitted may remain on the Services indefinitely unless you request its deletion in accordance with our Privacy Policy.</p>
+  </div>
+
+  <div class="section" id="s8">
+    <h2 class="section-title">8. Premium Features</h2>
+    <div class="subsection-title">General</div>
+    <p>We may offer premium features, virtual items, or in-app content ("Premium Features") for purchase within the Services. All transactions are processed through third-party platforms (e.g., Google Play Store, Apple App Store), and the payment terms of those platforms apply.</p>
+    <div class="subsection-title">Purchases</div>
+    <p>Premium Features may be offered as one-time lifetime purchases or as periodic subscriptions. By completing a purchase, you authorize the applicable payment processor to charge the payment method on file. Subscriptions will renew automatically unless cancelled at least 24 hours before the end of the current billing period, through the relevant third-party platform's account settings.</p>
+    <div class="subsection-title">Refunds</div>
+    <p>Refund eligibility is governed by the policies of the applicable app store platform (Google Play or Apple App Store). We do not independently process refunds for in-app purchases. Where required by applicable law — including consumer protection rights in the European Economic Area, United Kingdom, or other jurisdictions — refund rights under local law shall take precedence.</p>
+    <p>Indian users may seek redressal for unfair trade practices or deficiency in service through the Consumer Disputes Redressal mechanisms established under the Consumer Protection Act, 2019.</p>
+    <div class="subsection-title">Free Trials</div>
+    <p>If we offer a free trial, you must provide a valid payment method. At the end of the trial period, your subscription will begin automatically unless you cancel before the trial expires. Details of any free trial will be disclosed at the point of sign-up.</p>
+    <div class="subsection-title">Taxes</div>
+    <p>Applicable taxes (including Goods and Services Tax in India) will be added to purchases as required by law.</p>
+  </div>
+
+  <div class="section" id="s9">
+    <h2 class="section-title">9. Intellectual Property Rights</h2>
+    <p>All content within the Services — including but not limited to text, graphics, logos, tile artwork, game assets, sound effects, music, software, and code — is the property of the Company or its licensors and is protected under:</p>
+    <ul>
+      <li>The Copyright Act, 1957 (India);</li>
+      <li>The Trade Marks Act, 1999 (India); and</li>
+      <li>Applicable international intellectual property conventions.</li>
+    </ul>
+    <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable licence to access and use the Services and content solely for personal, non-commercial purposes. You may not reproduce, distribute, modify, create derivative works from, publicly perform or display, or otherwise exploit any content from the Services without our prior written consent.</p>
+    <p>If you believe your intellectual property rights have been infringed, please contact us at <a href="mailto:info@allthingsmahjong.in" style="color:var(--gold);">info@allthingsmahjong.in</a>.</p>
+  </div>
+
+  <div class="section" id="s10">
+    <h2 class="section-title">10. Content Submitted by You</h2>
+    <p>You retain ownership of any content you submit, upload, or transmit through the Services ("User Content"). By submitting User Content, you grant us a worldwide, royalty-free, non-exclusive, sublicensable, irrevocable licence to use, reproduce, adapt, publish, translate, distribute, and display such User Content in connection with operating and improving the Services.</p>
+    <p>You represent and warrant that:</p>
+    <ul>
+      <li>You own or have the necessary rights and consents to submit the User Content;</li>
+      <li>The User Content does not infringe any third-party intellectual property, privacy, or other rights; and</li>
+      <li>The User Content does not violate any applicable law or these Terms.</li>
+    </ul>
+    <p>We reserve the right to remove any User Content that, in our reasonable judgment, violates these Terms, applicable law, or third-party rights, without prior notice. We are not responsible for User Content submitted by users.</p>
+  </div>
+
+  <div class="section" id="s11">
+    <h2 class="section-title">11. Third-Party App Stores</h2>
+    <p>Our Services may be distributed through third-party platforms such as the Google Play Store or Apple App Store ("Third-Party App Stores"). These Terms are between you and us, not between you and the applicable Third-Party App Store. The Third-Party App Store is not responsible for providing any maintenance, support, warranty, or handling any claims related to the Services.</p>
+    <p>Additional terms imposed by the Third-Party App Store may apply to your use of the Services. You are responsible for reviewing and complying with those terms.</p>
+  </div>
+
+  <div class="section" id="s12">
+    <h2 class="section-title">12. Third-Party Sites</h2>
+    <p>The Services may contain links to third-party websites or services ("Third-Party Sites"). These links are provided for convenience only. We do not endorse, control, or accept responsibility for the content, practices, or policies of any Third-Party Sites. Your access to and use of Third-Party Sites is at your own risk and subject to the terms and conditions of those sites.</p>
+  </div>
+
+  <div class="section" id="s13">
+    <h2 class="section-title">13. Disclaimer of Medical Advice</h2>
+    <p>Our Services are intended for entertainment and gaming purposes only. Nothing in the Services constitutes medical, therapeutic, or health advice. If you experience a medical emergency, contact emergency services immediately (India: Dial 112).</p>
+    <p>Any health-related content appearing in the Services is for general informational purposes only and does not constitute a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional with any questions you may have regarding your health or medical conditions.</p>
+  </div>
+
+  <div class="section" id="s14">
+    <h2 class="section-title">14. Other Policies</h2>
+    <p>These Terms apply exclusively to your use of the Services. Our Privacy Policy, any community guidelines, and other policies published within the Services also form part of the agreement between you and us. In the event of any conflict between these Terms and any other policy, these Terms shall prevail unless otherwise specified.</p>
+  </div>
+
+  <div class="section" id="s15">
+    <h2 class="section-title">15. Legal Disputes and Governing Law</h2>
+    <div class="subsection-title">Governing Law</div>
+    <p>These Terms and any dispute arising out of or in connection with them shall be governed by and construed in accordance with the laws of India, without regard to conflict of laws principles. The courts of Mumbai, India shall have exclusive jurisdiction over any disputes, subject to the arbitration clause below.</p>
+    <div class="subsection-title">Informal Resolution</div>
+    <p>Before initiating any formal legal proceedings, you agree to first contact us at <a href="mailto:info@allthingsmahjong.in" style="color:var(--gold);">info@allthingsmahjong.in</a> and attempt to resolve any dispute informally. You must provide a written notice describing the nature of the dispute and the resolution you seek. We will use good faith efforts to resolve the issue within 30 days of receiving your notice.</p>
+    <div class="subsection-title">Arbitration</div>
+    <p>If the dispute is not resolved informally within 30 days, it shall be referred to and finally resolved by arbitration in accordance with the Arbitration and Conciliation Act, 1996 (India), as amended. The arbitration shall be:</p>
+    <ul>
+      <li>Conducted before a sole arbitrator mutually agreed upon by both parties, or appointed in accordance with the Act;</li>
+      <li>Held in Mumbai, India (or virtually, if mutually agreed);</li>
+      <li>Conducted in the English language; and</li>
+      <li>Subject to Indian substantive law.</li>
+    </ul>
+    <p>The arbitrator's award shall be final and binding. Nothing in this clause prevents either party from seeking urgent interim relief from a competent court.</p>
+    <div class="subsection-title">Consumer Redressal</div>
+    <p>Notwithstanding the above, users in India who are "consumers" as defined under the Consumer Protection Act, 2019, retain the right to approach the appropriate Consumer Disputes Redressal Commission for disputes falling within its jurisdiction.</p>
+    <div class="subsection-title">International Users</div>
+    <p>If you are accessing the Services from outside India, local mandatory consumer protection and data privacy laws in your jurisdiction may apply to you and shall not be overridden by these Terms. In particular:</p>
+    <ul>
+      <li>Users in the European Economic Area (EEA) or United Kingdom retain rights under applicable consumer protection and data protection laws (including the GDPR).</li>
+      <li>Users in other jurisdictions retain any non-waivable statutory rights afforded to them under local law.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s16">
+    <h2 class="section-title">16. Warranty Disclaimer; Limitation on Liability</h2>
+    <div class="subsection-title">Disclaimer of Warranties</div>
+    <div class="caps-warning">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE. WE DISCLAIM ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.</div>
+    <div class="subsection-title">Limitation of Liability</div>
+    <div class="caps-warning">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, WE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, GOODWILL, OR BUSINESS INTERRUPTION, ARISING OUT OF OR RELATING TO YOUR USE OF OR INABILITY TO USE THE SERVICES.</div>
+    <p>Our total aggregate liability to you for any claim arising out of or relating to these Terms or the Services shall not exceed the total amount paid by you to us in the twelve (12) months preceding the claim, or INR 500 (whichever is greater).</p>
+    <p>Some jurisdictions do not allow the exclusion or limitation of certain warranties or liabilities. In such jurisdictions, our liability shall be limited to the minimum extent permitted by applicable law.</p>
+  </div>
+
+  <div class="section" id="s17">
+    <h2 class="section-title">17. Indemnity</h2>
+    <p>You agree to indemnify, defend, and hold harmless the Company and its partners, officers, directors, employees, agents, and licensors from and against any claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or relating to:</p>
+    <ul>
+      <li>Your breach of any provision of these Terms;</li>
+      <li>Your use of the Services;</li>
+      <li>Any User Content you submit; or</li>
+      <li>Your violation of any applicable law or third-party rights.</li>
+    </ul>
+    <p>We reserve the right, at your expense, to assume exclusive control of any matter subject to indemnification by you, and you agree to cooperate with our defence of such claims.</p>
+  </div>
+
+  <div class="section" id="s18">
+    <h2 class="section-title">18. Digital Millennium Copyright Act (DMCA) Policy</h2>
+    <p>While our Services are primarily operated under Indian law, we respect the intellectual property rights of others and comply with applicable copyright law globally. If you believe your copyrighted work has been reproduced in a manner that constitutes infringement, please send a notice to <a href="mailto:info@allthingsmahjong.in" style="color:var(--gold);">info@allthingsmahjong.in</a> with the subject line "Copyright Notice" containing:</p>
+    <ul>
+      <li>Identification of the copyrighted work claimed to be infringed;</li>
+      <li>Identification of the material on our Services that you claim is infringing, with enough information for us to locate it;</li>
+      <li>Your contact information (name, address, telephone, email);</li>
+      <li>A statement that you have a good faith belief that the use is not authorised by the copyright owner, its agent, or applicable law; and</li>
+      <li>A statement, under penalty of applicable law, that the information in your notice is accurate and that you are authorised to act on behalf of the copyright owner.</li>
+    </ul>
+    <p>We will review and respond to valid notices in a reasonable time. Repeat infringers may have their accounts terminated.</p>
+    <p>Under Indian law, copyright infringement is also actionable under the <strong>Copyright Act, 1957</strong> and the <strong>Information Technology Act, 2000</strong>.</p>
+  </div>
+
+  <div class="section" id="s19">
+    <h2 class="section-title">19. General Terms</h2>
+    <div class="subsection-title">Entire Agreement</div>
+    <p>These Terms, together with our Privacy Policy and any other policies expressly incorporated by reference, constitute the entire agreement between you and us regarding the Services and supersede all prior agreements, representations, or understandings.</p>
+    <div class="subsection-title">Severability</div>
+    <p>If any provision of these Terms is held to be invalid, unlawful, or unenforceable under applicable law, such provision shall be modified to the minimum extent necessary to make it enforceable, or severed from these Terms, and the remaining provisions shall continue in full force and effect.</p>
+    <div class="subsection-title">Waiver</div>
+    <p>Our failure to enforce any right or provision of these Terms shall not constitute a waiver of that right or provision. Any waiver must be made in writing and signed by an authorised representative of the Company.</p>
+    <div class="subsection-title">Assignment</div>
+    <p>You may not assign or transfer any rights or obligations under these Terms without our prior written consent. We may freely assign these Terms, including in connection with a merger, acquisition, or sale of assets, upon notice to you.</p>
+    <div class="subsection-title">Language</div>
+    <p>These Terms are drafted in the English language. In the event of any conflict between an English version and any translated version (if provided), the English version shall prevail.</p>
+    <div class="subsection-title">Force Majeure</div>
+    <p>We shall not be liable for any failure or delay in performance of our obligations to the extent caused by circumstances beyond our reasonable control, including acts of God, natural disasters, pandemic, government action, or failure of third-party infrastructure.</p>
+  </div>
+
+  <div class="section" id="s20">
+    <h2 class="section-title">20. Grievance Officer</h2>
+    <p>In accordance with the Information Technology Act, 2000, and the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, we have designated a Grievance Officer to address user complaints and concerns:</p>
+    <div class="grievance-card">
+      <p><strong>Name:</strong> Vineeta Gadia</p>
+      <p><strong>Designation:</strong> Grievance Officer</p>
+      <p><strong>Company:</strong> All Things Mahjong LLP</p>
+      <p><strong>Address:</strong> WeWork, Vaswani Chambers, 264/65 Dr Annie Besant Rd, Worli Colony, Worli Police Station, Mumbai‑ 400030</p>
+      <p><strong>Email:</strong> <a href="mailto:grievance@allthingsmahjong.in">grievance@allthingsmahjong.in</a></p>
+      <p><strong>Response Time:</strong> We will acknowledge your complaint within 24 hours and endeavour to resolve it within 15 days of receipt.</p>
+    </div>
+  </div>
+
+  <div class="section" id="s21">
+    <h2 class="section-title">21. Contact Information</h2>
+    <p>For general questions, support, or legal notices, please contact us at:</p>
+    <div class="grievance-card">
+      <p><strong>All Things Mahjong LLP</strong></p>
+      <p><strong>Email:</strong> <a href="mailto:info@allthingsmahjong.in">info@allthingsmahjong.in</a></p>
+      <p><strong>Website:</strong> <a href="https://www.allthingsmahjong.in">www.allthingsmahjong.in</a></p>
+    </div>
+    <p style="margin-top:16px;">For urgent data protection or grievance matters, please contact the Grievance Officer listed in Section 20 above.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 All Things Mahjong LLP. All rights reserved.</p>
+  <p style="margin-top:8px;">
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="tos.html">Terms of Service</a>
+  </p>
+</footer>
+
+</body>
+</html>
