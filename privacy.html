@@ -2,28 +2,543 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Privacy Policy - All Things Mahjong</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — All Things Mahjong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-body {
-    font-family: Arial;
-    max-width: 800px;
-    margin: 40px auto;
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96E;
+    --gold-dim: rgba(201,168,76,0.15);
+    --ink: #1A1208;
+    --cream: #FAF5EB;
+    --bg: #0e0a04;
+    --bg-section: rgba(255,255,255,0.03);
+    --border: rgba(201,168,76,0.15);
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg);
+    color: rgba(255,255,255,0.8);
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px; height: 68px;
+    background: rgba(15,10,5,0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo-text { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 600; color: var(--cream); letter-spacing: 0.05em; }
+  .nav-back { font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+  .nav-back:hover { color: var(--gold); }
+
+  .page-hero {
+    padding: 64px 48px 48px;
+    border-bottom: 1px solid var(--border);
+    max-width: 900px; margin: 0 auto;
+  }
+  .page-eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--gold);
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 16px;
+  }
+  .page-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--gold); opacity: 0.6; }
+  .page-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 600; color: #fff;
+    margin-bottom: 12px;
+  }
+  .page-meta { font-size: 13px; color: rgba(255,255,255,0.35); letter-spacing: 0.05em; }
+
+  .content-wrap {
+    max-width: 900px; margin: 0 auto;
+    padding: 48px 48px 80px;
+  }
+
+  .notice-box {
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 12px;
+    background: rgba(201,168,76,0.06);
+    padding: 20px 24px;
+    margin-bottom: 40px;
+    font-size: 13px; font-weight: 600;
+    color: rgba(255,255,255,0.7);
     line-height: 1.6;
-}
+    letter-spacing: 0.02em;
+  }
+
+  .about-block {
+    padding: 28px;
+    border-left: 2px solid var(--gold);
+    background: var(--bg-section);
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 48px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .toc {
+    background: var(--bg-section);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 48px;
+  }
+  .toc-title {
+    font-family: 'Cinzel', serif;
+    font-size: 14px; font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin-bottom: 6px; }
+  .toc a { font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+  .toc a:hover { color: var(--gold); }
+
+  .section { margin-bottom: 48px; }
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 20px; font-weight: 600;
+    color: #fff;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+    scroll-margin-top: 80px;
+  }
+  .subsection-title {
+    font-size: 15px; font-weight: 700;
+    color: var(--gold-light);
+    margin: 24px 0 10px;
+    letter-spacing: 0.04em;
+  }
+  p { margin-bottom: 14px; color: rgba(255,255,255,0.7); font-size: 15px; }
+  ul, ol { padding-left: 22px; margin-bottom: 14px; }
+  li { margin-bottom: 6px; color: rgba(255,255,255,0.65); font-size: 15px; }
+  strong { color: rgba(255,255,255,0.9); font-weight: 700; }
+
+  .caps-warning {
+    font-size: 13px; font-weight: 700;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.65;
+    padding: 16px 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.02);
+    margin-bottom: 14px;
+  }
+
+  .legal-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 13px; overflow-x: auto; display: block; }
+  .legal-table th {
+    background: rgba(201,168,76,0.1);
+    color: var(--gold);
+    font-weight: 700;
+    padding: 10px 14px;
+    text-align: left;
+    border: 1px solid var(--border);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .legal-table td {
+    padding: 10px 14px;
+    border: 1px solid rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.6);
+    vertical-align: top;
+    min-width: 140px;
+  }
+  .legal-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+  .grievance-card {
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 12px;
+    background: rgba(201,168,76,0.05);
+    padding: 24px 28px;
+    margin-top: 16px;
+  }
+  .grievance-card p { margin-bottom: 6px; font-size: 14px; }
+  .grievance-card a { color: var(--gold); text-decoration: none; }
+  .grievance-card a:hover { text-decoration: underline; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 12px; color: rgba(255,255,255,0.25);
+    letter-spacing: 0.05em;
+  }
+  footer a { color: rgba(255,255,255,0.35); text-decoration: none; margin: 0 12px; }
+  footer a:hover { color: var(--gold); }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .page-hero, .content-wrap { padding-left: 20px; padding-right: 20px; }
+  }
 </style>
 </head>
-
 <body>
 
-<h1>Privacy Policy</h1>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div style="font-family:'Cinzel',serif;font-size:22px;color:var(--gold);">麻</div>
+    <span class="nav-logo-text">All Things Mahjong</span>
+  </a>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+</nav>
 
-<p>All Things Mahjong LLP respects your privacy.</p>
+<div class="page-hero">
+  <div class="page-eyebrow">Legal</div>
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="page-meta">All Things Mahjong LLP &nbsp;·&nbsp; Last Updated: May 1, 2026</p>
+</div>
 
-<p>This website does not collect personal data except when you voluntarily contact us via email.</p>
+<div class="content-wrap">
 
-<p>We do not share, sell, or distribute your information.</p>
+  <div class="about-block">
+    <strong>All Things Mahjong LLP</strong> ("we," "our," "us," or the "Company") is an Indian limited liability partnership registered under the Limited Liability Partnership Act, 2008 (LLPIN: ACV-8673), with its registered office at WeWork, Vaswani Chambers, 264/65 Dr Annie Besant Rd, Worli Colony, Worli Police Station, Mumbai 400030, India. We are committed to protecting the privacy of all users of our mobile games and digital services.<br><br>
+    This Privacy Policy describes how we collect, use, store, share, and protect personal data when you use our Services, and explains the rights available to you. Please read it carefully.
+  </div>
 
-<p>For any concerns, contact: info@allthingsmahjong.in</p>
+  <div class="notice-box">
+    BY ACCESSING OR USING OUR SERVICES, YOU ACKNOWLEDGE THAT YOU HAVE READ AND UNDERSTOOD THIS PRIVACY POLICY AND CONSENT TO THE COLLECTION AND PROCESSING OF YOUR PERSONAL DATA AS DESCRIBED HEREIN. IF YOU DO NOT AGREE, PLEASE STOP USING THE SERVICES IMMEDIATELY.
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#p1">Scope and Applicability</a></li>
+      <li><a href="#p2">Personal Data We Collect</a></li>
+      <li><a href="#p3">Why We Process Your Personal Data</a></li>
+      <li><a href="#p4">How We Share Your Personal Data</a></li>
+      <li><a href="#p5">Your Choices</a></li>
+      <li><a href="#p6">Your Privacy Rights</a></li>
+      <li><a href="#p7">Security</a></li>
+      <li><a href="#p8">International Transfers of Personal Data</a></li>
+      <li><a href="#p9">Retention</a></li>
+      <li><a href="#p10">Children</a></li>
+      <li><a href="#p11">Additional Notice — Indian Users (DPDPA)</a></li>
+      <li><a href="#p12">Additional Notice — EEA, UK, and Switzerland (GDPR)</a></li>
+      <li><a href="#p13">Additional Notice — Users in Other Jurisdictions</a></li>
+      <li><a href="#p14">Changes to This Privacy Policy</a></li>
+      <li><a href="#p15">Grievance Officer</a></li>
+      <li><a href="#p16">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="p1">
+    <h2 class="section-title">1. Scope and Applicability</h2>
+    <p>This Privacy Policy applies whenever you:</p>
+    <ul>
+      <li>use websites, landing pages, or web properties that we own or operate that link to this Policy;</li>
+      <li>download, install, or play our mobile game applications, including our Mahjong-themed titles (collectively, "Apps");</li>
+      <li>interact with our social media pages or profiles; or</li>
+      <li>otherwise access any content, feature, or service we own or operate that links to this Policy (collectively, "Services").</li>
+    </ul>
+    <p>You are not required to provide personal data to use our Services; however, some features (such as saving your game progress or syncing across devices) may be unavailable if you choose not to do so.</p>
+    <p>This Policy does not cover the privacy practices of third parties whose services you may access through ours (e.g., payment processors, app stores, social networks). We encourage you to review their respective privacy policies.</p>
+  </div>
+
+  <div class="section" id="p2">
+    <h2 class="section-title">2. Personal Data We Collect</h2>
+    <p>The personal data we collect depends on how you interact with our Services. "Personal data" or "personal information" means any data that identifies or can reasonably be used to identify an individual. We collect data from three sources:</p>
+
+    <div class="subsection-title">2.1 Data You Provide Directly</div>
+    <p><strong>Account and profile information:</strong> If you create an account (including via third-party single sign-on such as Google or Apple), we may collect your username, profile picture, email address, and language preferences.</p>
+    <p><strong>Game preferences and settings:</strong> Preferences such as sound or vibration settings that you configure within the game.</p>
+    <p><strong>Transaction information:</strong> When you purchase Premium Features, payment is processed entirely by the relevant app store (Google Play or Apple App Store). We receive only limited transaction data — such as a user identifier or purchase receipt — and do not receive or store your payment card details.</p>
+    <p><strong>Customer support communications:</strong> Information you provide when contacting us, including any screenshots or attachments you choose to share.</p>
+    <p><strong>Promotional participation:</strong> If you participate in surveys, contests, or other promotional activities, we may collect your name, date of birth, email address, phone number, or other information described in those activity's specific terms.</p>
+
+    <div class="subsection-title">2.2 Data Collected Automatically</div>
+    <p><strong>Usage and activity data:</strong> IP address, device identifier, advertising identifier (GAID/IDFA), operating system, browser type, language, session duration, click-stream data, in-game activity, crash logs, and purchasing activity.</p>
+    <p><strong>Device and network information:</strong> Operating system version, device model, mobile network identifiers (e.g., IMSI where permitted by law), and Wi-Fi or Bluetooth inferred location.</p>
+    <p><strong>Inferred location:</strong> We infer your approximate geographic region from your IP address or device settings. We do not collect precise GPS location without your explicit permission.</p>
+    <p><strong>Cookies, SDKs, and tracking technologies:</strong> We use cookies, software development kits (SDKs), pixels, and similar technologies to deliver personalised experiences, maintain session security, and measure the performance of our Services.</p>
+
+    <div class="subsection-title">2.3 Data From Third Parties</div>
+    <p><strong>Single sign-on (SSO):</strong> If you log in via Google, Apple, or Facebook, we receive data authorised by you on that platform (typically: username, email, profile picture).</p>
+    <p><strong>Social media:</strong> If you interact with our content on social media platforms, we may receive data associated with that interaction, subject to the platform's own privacy controls.</p>
+    <p><strong>Analytics and marketing partners:</strong> Subject to applicable law and your consent where required, we may receive aggregated or pseudonymous data from analytics and advertising partners to improve our Services and target relevant promotions.</p>
+  </div>
+
+  <div class="section" id="p3">
+    <h2 class="section-title">3. Why We Process Your Personal Data</h2>
+    <p>We process personal data for the following purposes:</p>
+    <ul>
+      <li>Operate and administer our Services, including running games, saving progress, processing transactions, and syncing preferences across devices.</li>
+      <li>Provide customer support and respond to your inquiries.</li>
+      <li>Send service-related communications (e.g., account updates, security notices, policy changes). You cannot opt out of essential service communications.</li>
+      <li>Personalise your experience — for example, displaying content in your preferred language and time zone.</li>
+      <li>Research, analyse, and improve our Services, including fraud detection, quality assurance, and feature development.</li>
+      <li>Promote our Services — subject to your consent where required — through targeted marketing, special offers, and partner promotions.</li>
+      <li>Administer promotional events such as contests or surveys.</li>
+      <li>Ensure the security and integrity of our Services, including identity verification and fraud prevention.</li>
+      <li>Facilitate corporate transactions (e.g., mergers, acquisitions, restructurings).</li>
+      <li>Comply with applicable legal and regulatory obligations in India and other jurisdictions.</li>
+      <li>Enforce these Terms, agreements, and applicable policies.</li>
+      <li>Any other purpose for which you have given explicit consent.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="p4">
+    <h2 class="section-title">4. How We Share Your Personal Data</h2>
+    <p>We do not sell your personal data. We may share your personal data in the following circumstances:</p>
+    <p><strong>Within our Company group:</strong> We may share data with affiliated entities for operational, management, and analytical purposes, subject to equivalent privacy protections.</p>
+    <p><strong>Vendors and service providers:</strong> Third parties that provide services on our behalf (e.g., hosting, analytics, payment processing, fraud prevention, legal and financial advisors) may access your data solely to perform those services.</p>
+    <p><strong>Business partners:</strong> Where we co-sponsor promotions or events with third parties, we may share relevant data with those partners, subject to their own privacy policies.</p>
+    <p><strong>Analytics and advertising partners:</strong> Subject to your consent and applicable law, we may share identifiers and usage data with advertising partners for interest-based advertising and audience measurement.</p>
+    <p><strong>Corporate transactions:</strong> In the event of a merger, acquisition, sale of assets, or similar transaction, your data may be transferred to the relevant counterparty, subject to equivalent privacy protections or a fresh consent request where required by law.</p>
+    <p><strong>Professional advisors:</strong> We may share data with lawyers, accountants, auditors, or insurers where necessary for them to provide their services.</p>
+    <p><strong>Legal obligations and safety:</strong> We may disclose data when required by a valid legal process (e.g., court order, subpoena), to comply with applicable law (including requests from Indian government authorities under the IT Act, 2000), to protect the safety of users or the public, or to enforce our legal rights.</p>
+    <p><strong>With your consent:</strong> For any other sharing, we will ask for your explicit consent.</p>
+    <p>We require all third parties to handle your personal data securely and in accordance with applicable law.</p>
+  </div>
+
+  <div class="section" id="p5">
+    <h2 class="section-title">5. Your Choices</h2>
+    <p><strong>Marketing communications:</strong> You can opt out of promotional notifications through the in-app Settings menu or by following the unsubscribe link in our emails. You will continue to receive essential service-related communications.</p>
+    <p><strong>Correcting your information:</strong> You can update certain account details through the Settings section of the App. For changes you cannot make yourself, contact us at <a href="mailto:info@allthingsmahjong.in" style="color:var(--gold);">info@allthingsmahjong.in</a>.</p>
+    <p><strong>Targeted advertising:</strong> You can limit interest-based advertising by adjusting your device's advertising settings (e.g., resetting your advertising ID or enabling "Limit Ad Tracking"). You can also opt out through the in-app Privacy Preference menu.</p>
+    <p><strong>Cookies and tracking technologies:</strong> You can manage cookie preferences through your browser or device settings. Note that some features may not function correctly if tracking is disabled.</p>
+  </div>
+
+  <div class="section" id="p6">
+    <h2 class="section-title">6. Your Privacy Rights</h2>
+    <p>Depending on the laws of your jurisdiction, you may have the following rights in relation to your personal data:</p>
+    <ul>
+      <li><strong>Right to access</strong> — obtain a copy of the personal data we hold about you.</li>
+      <li><strong>Right to rectification</strong> — request correction of inaccurate or incomplete data.</li>
+      <li><strong>Right to erasure</strong> — request deletion of your personal data, subject to legal retention obligations.</li>
+      <li><strong>Right to restriction</strong> — request that we limit processing in certain circumstances.</li>
+      <li><strong>Right to data portability</strong> — receive your data in a structured, machine-readable format.</li>
+      <li><strong>Right to object</strong> — object to processing based on legitimate interests or for direct marketing.</li>
+      <li><strong>Right to withdraw consent</strong> — where processing is based on consent, withdraw it at any time without affecting prior processing.</li>
+      <li><strong>Right to nominate</strong> — under the DPDPA (India), you may nominate another individual to exercise your rights on your behalf in the event of your death or incapacity.</li>
+    </ul>
+    <p>To exercise your rights, please contact our Grievance Officer (Section 15) or email us at <a href="mailto:info@allthingsmahjong.in" style="color:var(--gold);">info@allthingsmahjong.in</a> with the subject line "Privacy Rights Request."</p>
+  </div>
+
+  <div class="section" id="p7">
+    <h2 class="section-title">7. Security</h2>
+    <p>We implement commercially reasonable administrative, technical, and physical safeguards to protect your personal data from unauthorised access, disclosure, alteration, and destruction. These measures are reviewed and updated periodically.</p>
+    <p>However, no system is completely secure. We cannot guarantee the absolute security of data transmitted over the internet or stored on our systems. You are also responsible for maintaining the confidentiality of your account credentials. If you suspect unauthorised access to your account, please notify us immediately at <a href="mailto:info@allthingsmahjong.in" style="color:var(--gold);">info@allthingsmahjong.in</a>.</p>
+    <p>In the event of a personal data breach that is likely to result in a risk to your rights and freedoms, we will notify the relevant supervisory authorities and, where required, you, in accordance with applicable law.</p>
+  </div>
+
+  <div class="section" id="p8">
+    <h2 class="section-title">8. International Transfers of Personal Data</h2>
+    <p>We are based in India and primarily store and process data in India. However, some of our service providers and partners are located outside India, and your data may be transferred to and processed in other countries.</p>
+    <p>When we transfer personal data outside India, we rely on appropriate transfer safeguards as required by applicable law, which may include:</p>
+    <ul>
+      <li>Standard Contractual Clauses (SCCs) or equivalent contractual protections approved by the relevant regulatory body;</li>
+      <li>Adequacy decisions where the destination country is recognised as providing an equivalent level of data protection; or</li>
+      <li>Your explicit consent, where required.</li>
+    </ul>
+    <p>For users in the EEA, UK, or Switzerland, please see Section 12 for GDPR-specific transfer safeguards.</p>
+  </div>
+
+  <div class="section" id="p9">
+    <h2 class="section-title">9. Retention</h2>
+    <p>We retain your personal data for as long as necessary to fulfil the purposes described in this Privacy Policy, or as required by applicable law. Retention periods are determined by factors including:</p>
+    <ul>
+      <li>Whether you have an active account with us;</li>
+      <li>Legal, regulatory, or contractual requirements (e.g., tax or accounting obligations);</li>
+      <li>The nature of the data and the potential risk of harm from unauthorised use; and</li>
+      <li>Whether the data is needed to resolve disputes or enforce our agreements.</li>
+    </ul>
+    <p>When personal data is no longer required, we securely delete or anonymise it.</p>
+  </div>
+
+  <div class="section" id="p10">
+    <h2 class="section-title">10. Children</h2>
+    <p>Our Services are not directed at children under the age of 18 (or such higher age as required by the laws of your jurisdiction). We do not knowingly collect personal data from children without verifiable parental consent.</p>
+    <p>If you are a parent or guardian and believe we have inadvertently collected data from a child under 18, please contact us immediately at <a href="mailto:info@allthingsmahjong.in" style="color:var(--gold);">info@allthingsmahjong.in</a> and we will take prompt steps to delete such data.</p>
+  </div>
+
+  <div class="section" id="p11">
+    <h2 class="section-title">11. Additional Notice — Indian Users (DPDPA)</h2>
+    <p>This section applies specifically to users located in India and supplements the rest of this Privacy Policy. It is provided in compliance with the Digital Personal Data Protection Act, 2023 ("DPDPA") and the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 ("SPDI Rules").</p>
+
+    <div class="subsection-title">11.1 Our Role</div>
+    <p>We act as a "Data Fiduciary" as defined under the DPDPA with respect to the personal data of Indian users.</p>
+
+    <div class="subsection-title">11.2 Lawful Bases for Processing</div>
+    <p>Under the DPDPA, we process your personal data on the following lawful bases:</p>
+    <ul>
+      <li><strong>Consent:</strong> For processing not strictly necessary for the performance of a contract or a legal obligation, we will seek your free, specific, informed, and unambiguous consent. You may withdraw consent at any time; withdrawal will not affect prior processing.</li>
+      <li><strong>Legitimate uses:</strong> Where permitted under the DPDPA and its rules without requiring consent (e.g., performance of a contract, compliance with a legal obligation, medical emergency, employment-related processing, or processing for public interest purposes recognised by law).</li>
+    </ul>
+
+    <div class="subsection-title">11.3 Sensitive Personal Data (SPDI Rules)</div>
+    <p>To the extent we collect Sensitive Personal Data or Information ("SPDI") as defined under the SPDI Rules (e.g., financial information, health data), we do so only with your explicit consent and process it with heightened security and access controls.</p>
+
+    <div class="subsection-title">11.4 Your Rights Under the DPDPA</div>
+    <ul>
+      <li>Right to information about processing.</li>
+      <li>Right to correction and erasure of personal data.</li>
+      <li>Right to grievance redressal — you may raise a complaint with our Grievance Officer (see Section 15).</li>
+      <li>Right to nominate another person to exercise your rights in the event of death or incapacity.</li>
+      <li>Right to complain to the Data Protection Board of India, once established and operational.</li>
+    </ul>
+
+    <div class="subsection-title">11.5 Data Localisation</div>
+    <p>To the extent required by Indian law, we retain certain categories of personal data on servers located in India. Where data is transferred outside India, we comply with any cross-border transfer conditions prescribed by the Central Government under the DPDPA.</p>
+
+    <div class="subsection-title">11.6 Consumer Redressal</div>
+    <p>Indian users who are "consumers" under the Consumer Protection Act, 2019 may also seek redressal through the appropriate Consumer Disputes Redressal Commission for any deficiency in service or unfair trade practices.</p>
+  </div>
+
+  <div class="section" id="p12">
+    <h2 class="section-title">12. Additional Notice — EEA, UK, and Switzerland (GDPR)</h2>
+    <p>This section applies to individuals located in the European Economic Area (EEA), United Kingdom (UK), or Switzerland at the time of data collection.</p>
+
+    <div class="subsection-title">12.1 Our Role</div>
+    <p>We are the data controller with respect to personal data collected from users in the Designated Countries. Third-party service providers acting on our behalf are data processors.</p>
+
+    <div class="subsection-title">12.2 Legal Bases for Processing (GDPR)</div>
+    <table class="legal-table">
+      <thead>
+        <tr><th>Legal Basis</th><th>Processing Purposes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Legal obligation (Art. 6(1)(c) GDPR)</td><td>Maintain legal &amp; regulatory compliance; Ensure security of Services; Respond to law enforcement requests</td></tr>
+        <tr><td>Performance of contract (Art. 6(1)(b) GDPR)</td><td>Operate &amp; administer Services; Provide customer support; Service-related communications; Share within corporate group and with service providers</td></tr>
+        <tr><td>Legitimate interests (Art. 6(1)(f) GDPR)</td><td>Personalise experience; Research &amp; develop Services; Corporate transactions; Enforce Terms; Share with professional advisors</td></tr>
+        <tr><td>Consent (Art. 6(1)(a) GDPR)</td><td>Promotional communications; Interest-based advertising; Analytics &amp; advertising partner sharing; Any other purpose for which you give express consent</td></tr>
+      </tbody>
+    </table>
+
+    <div class="subsection-title">12.3 Your Rights Under GDPR</div>
+    <ul>
+      <li>Right of access (Art. 15)</li>
+      <li>Right to rectification (Art. 16)</li>
+      <li>Right to erasure / "right to be forgotten" (Art. 17)</li>
+      <li>Right to restriction of processing (Art. 18)</li>
+      <li>Right to data portability (Art. 20)</li>
+      <li>Right to object to processing (Art. 21)</li>
+      <li>Rights related to automated decision-making and profiling (Art. 22) — we do not make decisions based solely on automated processing that produce significant legal or similar effects.</li>
+      <li>Right to lodge a complaint with your national supervisory authority. EEA authorities are listed at <a href="https://edpb.europa.eu" style="color:var(--gold);" target="_blank">edpb.europa.eu</a>. The UK authority is the ICO. The Swiss authority is the FDPIC.</li>
+    </ul>
+
+    <div class="subsection-title">12.4 Transfer Mechanisms</div>
+    <p>When we transfer personal data from the Designated Countries to India or other third countries, we rely on Standard Contractual Clauses (SCCs) approved by the European Commission, an adequacy decision where applicable, or your explicit consent where no other mechanism is available.</p>
+
+    <div class="subsection-title">12.5 Marketing Communications (EEA/UK/Switzerland)</div>
+    <p>We will only send you marketing communications by electronic means (including email or push notification) if you have given prior consent, or where permitted by applicable law. You may withdraw consent or object to direct marketing at any time, free of charge.</p>
+  </div>
+
+  <div class="section" id="p13">
+    <h2 class="section-title">13. Additional Notice — Users in Other Jurisdictions</h2>
+    <p>We serve users globally and aim to respect privacy rights in all jurisdictions. Where local law provides privacy rights not expressly set out in this Policy, we will endeavour to honour those rights to the extent required.</p>
+    <p>For users who do not fall within the Indian or GDPR-specific sections above, the general provisions of this Privacy Policy apply, and you retain any non-waivable statutory rights afforded by the laws of your jurisdiction.</p>
+  </div>
+
+  <div class="section" id="p14">
+    <h2 class="section-title">14. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do:</p>
+    <ul>
+      <li>We will update the "Last Updated" date at the top of this document.</li>
+      <li>For material changes, we will provide prominent notice within the App, via email (if we have your address), or through another appropriate channel.</li>
+      <li>Where required by the DPDPA or other applicable law, we will seek fresh consent if the changes affect the basis on which we process your data.</li>
+    </ul>
+    <p>Your continued use of the Services after the effective date of any update constitutes acceptance of the revised Policy.</p>
+  </div>
+
+  <div class="section" id="p15">
+    <h2 class="section-title">15. Grievance Officer</h2>
+    <p>In accordance with the Information Technology Act, 2000, the IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, and the Digital Personal Data Protection Act, 2023, we have designated a Grievance Officer to address privacy-related complaints and requests:</p>
+    <div class="grievance-card">
+      <p><strong>Name:</strong> Vineeta Gadia</p>
+      <p><strong>Designation:</strong> Grievance Officer / Data Protection Contact</p>
+      <p><strong>Company:</strong> All Things Mahjong LLP</p>
+      <p><strong>Address:</strong> WeWork, Vaswani Chambers, 264/65 Dr Annie Besant Rd, Worli Colony, Worli Police Station, Mumbai 400030, India</p>
+      <p><strong>Email:</strong> <a href="mailto:grievance@allthingsmahjong.in">grievance@allthingsmahjong.in</a></p>
+      <p><strong>Response time:</strong> We will acknowledge your complaint within 24 hours and endeavour to resolve it within 15 days of receipt.</p>
+    </div>
+    <p style="margin-top:16px;">If you are dissatisfied with our response, you may escalate your complaint to the Data Protection Board of India (once operational) or the relevant supervisory authority in your jurisdiction.</p>
+  </div>
+
+  <div class="section" id="p16">
+    <h2 class="section-title">16. Contact Us</h2>
+    <p>For any questions, concerns, or requests relating to this Privacy Policy or your personal data, please contact us:</p>
+    <div class="grievance-card">
+      <p><strong>All Things Mahjong LLP</strong></p>
+      <p>WeWork, Vaswani Chambers, 264/65 Dr Annie Besant Rd, Worli Colony, Worli Police Station, Mumbai 400030, India</p>
+      <p><strong>Email:</strong> <a href="mailto:info@allthingsmahjong.in">info@allthingsmahjong.in</a></p>
+      <p><strong>Website:</strong> <a href="https://www.allthingsmahjong.in">www.allthingsmahjong.in</a></p>
+    </div>
+    <p style="margin-top:16px;">For urgent privacy concerns, please also copy the Grievance Officer at <a href="mailto:grievance@allthingsmahjong.in" style="color:var(--gold);">grievance@allthingsmahjong.in</a>.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Appendix A: Summary of Personal Data Collected, Used, and Disclosed</h2>
+    <table class="legal-table">
+      <thead>
+        <tr><th>Category of Personal Data</th><th>Purposes of Processing</th><th>Categories of Recipients</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Identifiers (username, email, IP address, device IDs, account numbers)</td>
+          <td>Operate Services; Customer support; Communications; Personalise; Research; Promote; Security; Legal compliance; Enforce Terms</td>
+          <td>Company group; Service providers; Business partners; Analytics partners; Legal authorities</td>
+        </tr>
+        <tr>
+          <td>Contact &amp; account data (name, address, email, phone, login credentials)</td>
+          <td>Operate Services; Customer support; Communications; Personalise; Research; Promote; Security; Legal compliance</td>
+          <td>Company group; Service providers; Business partners; Legal authorities</td>
+        </tr>
+        <tr>
+          <td>Demographic information (age group, gender)</td>
+          <td>Operate Services; Personalise; Research; Legal compliance</td>
+          <td>Company group; Service providers; Legal authorities</td>
+        </tr>
+        <tr>
+          <td>Transaction &amp; commercial data (purchase records, subscription history)</td>
+          <td>Operate Services; Customer support; Personalise; Research; Promote; Security; Legal compliance</td>
+          <td>Company group; Service providers; Analytics partners; Legal authorities</td>
+        </tr>
+        <tr>
+          <td>Usage &amp; internet activity data (browsing/click-stream, session data, crash logs)</td>
+          <td>Operate Services; Customer support; Personalise; Research; Promote; Security; Legal compliance</td>
+          <td>Company group; Service providers; Analytics partners; Legal authorities</td>
+        </tr>
+        <tr>
+          <td>Geolocation data (inferred from IP / device settings)</td>
+          <td>Operate Services; Personalise; Promote; With your consent</td>
+          <td>Company group; Service providers; Legal authorities</td>
+        </tr>
+        <tr>
+          <td>Inferences &amp; game behavioural data (preferences, in-game behaviour patterns)</td>
+          <td>Personalise; Research; Promote; With your consent</td>
+          <td>Company group; Service providers; Analytics partners</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 All Things Mahjong LLP. All rights reserved.</p>
+  <p style="margin-top:8px;">
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="tos.html">Terms of Service</a>
+  </p>
+</footer>
 
 </body>
 </html>
